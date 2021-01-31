@@ -22,7 +22,7 @@ t_NOT = r'\!'
 t_OR = r'\|'
 t_AND = r'\&'
 t_IMPL = r'[-][>]'
-t_VAR = r'[A-Za-z0-9\'][A-Za-z0-9\']*'
+t_VAR = r'[A-Z0-9\'][A-Z0-9\']*'
 t_RIGHT = r'\)'
 
 t_ignore = ' \t\r'
