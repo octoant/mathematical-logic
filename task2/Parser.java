@@ -58,7 +58,7 @@ public final class Parser {
             variable.append(character);
             character = expr.charAt(++pointer);
         }
-        if (pointer == expr.length() - 1) variable.append(character);
+        if (pointer == expr.length() - 1 && isAllowedChar(character)) variable.append(character);
         return new Node(variable.toString());
     }
 

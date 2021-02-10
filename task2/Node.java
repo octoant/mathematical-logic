@@ -20,6 +20,10 @@ public class Node {
         current = variable;
     }
 
+    public String getCurrent() {
+        return this.current;
+    }
+
     public Node leftNode() {
         return this.leftNode;
     }
@@ -42,5 +46,10 @@ public class Node {
             return current + leftNode.toString();
 
         else return current; // returns: A
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return toString().equals(obj.toString());
     }
 }
