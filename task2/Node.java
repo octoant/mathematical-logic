@@ -12,24 +12,24 @@ public class Node {
         this.leftNode = leftNode;
         this.rightNode = rightNode;
 
-        int tmp = instance.hashCode();
-            tmp = (tmp << 6) - tmp + leftNode.hashCode();
-            tmp = (tmp << 6) - tmp + rightNode.hashCode();
-        hashCode = tmp;
+        int hash = instance.hashCode();
+            hash = (hash << 6) - hash + leftNode.hashCode();
+            hash = (hash << 6) - hash + rightNode.hashCode();
+        this.hashCode = hash;
     }
     // half node
     public Node (Operation operation, Node leftNode) {
         instance = operation.toString();
         this.leftNode = leftNode;
 
-        int tmp = instance.hashCode();
-            tmp = tmp << 6 - tmp + leftNode.hashCode();
-        hashCode = tmp;
+        int hash = instance.hashCode();
+            hash = (hash << 6) - hash + leftNode.hashCode();
+        this.hashCode = hash;
     }
     // leaf
     public Node(String variable) {
         instance = variable;
-        hashCode = instance.hashCode();
+        this.hashCode = instance.hashCode();
     }
 
     public String getInstance() {
